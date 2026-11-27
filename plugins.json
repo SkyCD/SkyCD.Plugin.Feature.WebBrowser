@@ -13,7 +13,13 @@
       "releases": [
         {
           "version": "1.0.0",
-          "minHostVersion": "3.0.0"
+          "minHostVersion": "3.0.0",
+          "maxHostVersion": "3.2147483647.2147483647.2147483647"
+        },
+        {
+          "version": "3.0.0",
+          "minHostVersion": "3.0.0",
+          "maxHostVersion": "3.2147483647.2147483647.2147483647"
         }
       ]
     }
