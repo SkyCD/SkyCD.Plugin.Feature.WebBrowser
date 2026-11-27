@@ -45,6 +45,16 @@ jobs:
       - run: dotnet restore "$PLUGIN_PROJECT" --locked-mode
       - run: dotnet format "$PLUGIN_PROJECT" --verify-no-changes --no-restore --verbosity minimal
       - run: dotnet pack "$PLUGIN_PROJECT" --configuration Release --no-restore --output artifacts
+      - name: Run standalone plugin tests
+        shell: pwsh
+        run: |
+          $tests = "tests/$env:PLUGIN_ID.Tests/$env:PLUGIN_ID.Tests.csproj"
+          if (Test-Path -LiteralPath $tests) {
+            dotnet restore $tests --locked-mode
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+            dotnet test $tests -c Release --no-restore
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          }
       - name: Validate the tag and select the release package
         if: github.ref_type == 'tag' || inputs.version != ''
         shell: pwsh
