@@ -4,7 +4,7 @@ Adds **Tools → Web Browser** to SkyCD 3.0. The window uses the Avalonia WebVie
 
 Install **Web Browser** from **Options → Plugins → Browse** and restart SkyCD.
 
-To build, install the .NET 10 SDK and configure the SkyCD GitHub Packages source with a credential that has read:packages access. Run `dotnet restore --locked-mode` and then `dotnet pack -c Release --no-restore`.
+To build, install the .NET 10 SDK and configure the SkyCD GitHub Packages source with a credential that has `read:packages` access.
 
 The project and its assets live under `src/SkyCD.Plugin.Feature.WebBrowser/`.
 
@@ -12,7 +12,6 @@ The project and its assets live under `src/SkyCD.Plugin.Feature.WebBrowser/`.
 dotnet restore src/SkyCD.Plugin.Feature.WebBrowser/SkyCD.Plugin.Feature.WebBrowser.csproj --locked-mode
 dotnet pack src/SkyCD.Plugin.Feature.WebBrowser/SkyCD.Plugin.Feature.WebBrowser.csproj -c Release --no-restore
 ```
-
 
 The historical Visual Basic plugin and its MIT license are preserved on the [legacy-v2 branch](../../tree/legacy-v2). The current plugin is licensed under BSD-2-Clause. See [LICENSE](LICENSE).
 
