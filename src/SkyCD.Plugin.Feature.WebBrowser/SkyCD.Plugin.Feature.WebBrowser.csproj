@@ -23,7 +23,7 @@
         <PackageReference Include="Avalonia.Controls.WebView" Version="12.1.2"/>
     </ItemGroup>
     <ItemGroup>
-        <None Update="LICENSE;README.md" Pack="true" PackagePath=""/>
+        <None Include="../../LICENSE;../../README.md" Pack="true" PackagePath=""/>
         <EmbeddedResource Include="Assets/icon.ico" LogicalName="SkyCD.Plugin.Icon.ico"/>
     </ItemGroup>
 </Project>
