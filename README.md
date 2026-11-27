@@ -1,14 +1,11 @@
-[![Latest release](https://img.shields.io/github/v/release/SkyCD/SkyCD.WebBrowserFunctionality.dll)](https://github.com/SkyCD/SkyCD.WebBrowserFunctionality.dll/releases/latest)
-[![License](https://img.shields.io/github/license/SkyCD/SkyCD.WebBrowserFunctionality.dll)](https://github.com/SkyCD/SkyCD.WebBrowserFunctionality.dll/blob/main/LICENSE)
+# SkyCD.Plugin.Feature.WebBrowser
 
-# SkyCD.WebBrowserFunctionality.dll
+Adds **Tools → Web Browser** to SkyCD 3.0. The window uses the Avalonia WebView runtime supplied by the SkyCD desktop host.
 
-SkyCD.WebBrowserFunctionality.dll is a simple WebBrowser plugin for SkyCD, a file indexing tool for Windows.
+Install **Web Browser** from **Options → Plugins → Browse** and restart SkyCD.
 
-## Installation
+To build, install the .NET 10 SDK and configure the SkyCD GitHub Packages source with a credential that has read:packages access. Run `dotnet restore --locked-mode` and then `dotnet pack -c Release --no-restore`.
 
-To install this plugin, simply copy SkyCD.WebBrowserFunctionality.dll into the `Plug-ins` folder of SkyCD.
+The marketplace reads `plugins.json` and the anonymous NuGet v3 package feed under `feed/`. For each release, build a new package version, place the lowercase package file under `feed/packages/<id>/<version>/`, and update both the version index and publisher manifest. Keep previously published versions available.
 
-## License
-
-This plugin is released under the [MIT License](https://github.com/SkyCD/SkyCD.WebBrowserFunctionality.dll/blob/main/LICENSE). Please read the license before using this software.
+The historical Visual Basic plugin and its MIT license are preserved on the [legacy-v2 branch](../../tree/legacy-v2). The current plugin is licensed under BSD-2-Clause. See [LICENSE](LICENSE).

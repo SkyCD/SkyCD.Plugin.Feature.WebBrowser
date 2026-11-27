@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="SkyCD.SDK" Version="[$(SkyCdSdkVersion)]" PrivateAssets="all"/>
+    </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version>1.0.0</Version>
+        <RepositoryUrl>https://github.com/SkyCD/SkyCD.Plugin.Feature.WebBrowser</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/SkyCD/SkyCD.Plugin.Feature.WebBrowser</PackageProjectUrl>
+        <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Company>SkyCD</Company>
+        <Authors>SkyCD</Authors>
+        <AssemblyTitle>Web Browser</AssemblyTitle>
+        <Description>Opens a built-in web browser window from the Tools menu.</Description>
+    </PropertyGroup>
+    <ItemGroup>
+        <AssemblyMetadata Include="AuthorUrl" Value="https://sourceforge.net/projects/skycd/"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Avalonia.Controls.WebView" Version="12.1.2"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="LICENSE;README.md" Pack="true" PackagePath=""/>
+        <EmbeddedResource Include="Assets/icon.ico" LogicalName="SkyCD.Plugin.Icon.ico"/>
+    </ItemGroup>
+</Project>
