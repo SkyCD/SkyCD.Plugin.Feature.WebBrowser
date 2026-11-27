@@ -15,6 +15,14 @@ dotnet pack src/SkyCD.Plugin.Feature.WebBrowser/SkyCD.Plugin.Feature.WebBrowser.
 
 The historical Visual Basic plugin and its MIT license are preserved on the [legacy-v2 branch](../../tree/legacy-v2). The current plugin is licensed under BSD-2-Clause. See [LICENSE](LICENSE).
 
+## Standalone tests
+
+Run the command and assembly metadata tests with the .NET 10 SDK and SkyCD GitHub Packages access. The tests use SkyCD.Testing and run from this repository.
+
+~~~sh
+dotnet test tests/SkyCD.Plugin.Feature.WebBrowser.Tests/SkyCD.Plugin.Feature.WebBrowser.Tests.csproj -c Release
+~~~
+
 ## Host integration tests
 
 The **SkyCD host integration** workflow runs on pull requests and can also be started from the Actions tab. It builds this checkout and runs the corresponding SkyCD host tests.
